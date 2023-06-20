@@ -78,6 +78,21 @@ public class ServiceImplTest extends ServiceImpl {
     public void throwExceptionDivideZeroTest() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> getResultDivide(1, 0));
     }
+
+    int testNum1 = 9;
+    int testNum2 = 3;
+    String testMinusResult = 9 + " - " + 3 + " = " + 6;
+    String testPlusResult = 9 + " + " + 3 + " = " + 12;
+
+    @Test
+    public void getResultMinusTest1() {
+        Assertions.assertEquals(getResultMinus(testNum1, testNum2), testMinusResult);
+    }
+
+    @Test
+    public void getResultPlusTest1() {
+        Assertions.assertEquals(getResultPlus(testNum1, testNum2), testPlusResult);
+    }
 }
 
 
