@@ -7,5 +7,5 @@ public interface Service {
     String getResultMinus( int num1, int num2);
     String getResultPlus(int num1, int num2);
     String getResultMultiply(int num1, int num2);
-    String getResultDivide(int num1, int num2);
+    String getResultDivide(int num1, int num2) throws IllegalArgumentException;
 }
